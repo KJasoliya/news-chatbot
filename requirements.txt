@@ -19,7 +19,8 @@ pykwalify<=1.6.0
 coloredlogs==10.0
 flask==1.0.2
 flask_cors==3.0.4
-scikit-learn==0.19.1
+scikit-learn==0.20.1
+scipy==1.1.0
 rasa_nlu~=0.13.0
 colorhash==1.0.2
 pika==0.11.2
@@ -32,6 +33,5 @@ rasa_core_sdk~=0.11.0
 rasa_core~=0.12.0
 pymongo==3.5.1
 python-dateutil==2.7.3
-spacy>=2.0.0,<3.0.0
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz#en_core_web_sm
+spacy==2.0.12
 sklearn_crfsuite==0.3.6
