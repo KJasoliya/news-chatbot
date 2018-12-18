@@ -1,4 +1,2 @@
-language: "en"
-
 pipeline: spacy_sklearn
 

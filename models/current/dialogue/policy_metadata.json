@@ -6,7 +6,7 @@
   "python": "2.7.10", 
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble", 
   "rasa_core": "0.12.3", 
-  "trained_at": "20181217-202012", 
+  "trained_at": "20181218-132002", 
   "policy_names": [
     "rasa_core.policies.keras_policy.KerasPolicy", 
     "rasa_core.policies.memoization.MemoizationPolicy"

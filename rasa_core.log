@@ -1085,3 +1085,89 @@ c0e6e205039e4687a13b3505aa6067ac: Received packet CLOSE data None
 38f1ce87671446aba445174ab0fe9c00: Sending packet PONG data None
 38f1ce87671446aba445174ab0fe9c00: Received packet PING data None
 38f1ce87671446aba445174ab0fe9c00: Sending packet PONG data None
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_nlu/extractors/entity_synonyms.py:85: UserWarning: Failed to load synonyms file from 'models/current/nlu/entity_synonyms.json'
+  "".format(entity_synonyms_file))
+
+/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Server initialized for gevent.
+Rasa Core server is up and running on http://localhost:5002
+c7d4907d8ac1439d9c20f49b69a8055f: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': [], 'sid': 'c7d4907d8ac1439d9c20f49b69a8055f'}
+c7d4907d8ac1439d9c20f49b69a8055f: Sending packet MESSAGE data 0
+c7d4907d8ac1439d9c20f49b69a8055f: Received packet MESSAGE data 2["user_uttered",{"message":"/greet","customData":{}}]
+received event "user_uttered" from c7d4907d8ac1439d9c20f49b69a8055f [/]
+emitting event "bot_uttered" to c7d4907d8ac1439d9c20f49b69a8055f [/]
+c7d4907d8ac1439d9c20f49b69a8055f: Sending packet MESSAGE data 2["bot_uttered",{"text":"Hey there! Tell me your name."}]
+44cb4afc9e8b4c509261774befd0116d: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': [], 'sid': '44cb4afc9e8b4c509261774befd0116d'}
+44cb4afc9e8b4c509261774befd0116d: Sending packet MESSAGE data 0
+44cb4afc9e8b4c509261774befd0116d: Received packet MESSAGE data 2["user_uttered",{"message":"/greet","customData":{}}]
+received event "user_uttered" from 44cb4afc9e8b4c509261774befd0116d [/]
+emitting event "bot_uttered" to 44cb4afc9e8b4c509261774befd0116d [/]
+44cb4afc9e8b4c509261774befd0116d: Sending packet MESSAGE data 2["bot_uttered",{"text":"Hey there! Tell me your name."}]
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Sending packet OPEN data {'pingInterval': 25000, 'pingTimeout': 60000, 'upgrades': [], 'sid': '01b288a46c3b4ee7a5a2f79ce4b46e4e'}
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Sending packet MESSAGE data 0
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Received packet MESSAGE data 2["user_uttered",{"message":"/greet","customData":{}}]
+received event "user_uttered" from 01b288a46c3b4ee7a5a2f79ce4b46e4e [/]
+emitting event "bot_uttered" to 01b288a46c3b4ee7a5a2f79ce4b46e4e [/]
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Sending packet MESSAGE data 2["bot_uttered",{"text":"Hey there! Tell me your name."}]
+44cb4afc9e8b4c509261774befd0116d: Received packet PING data None
+44cb4afc9e8b4c509261774befd0116d: Sending packet PONG data None
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Received packet MESSAGE data 2["user_uttered",{"message":"my name is kinnari","customData":{}}]
+received event "user_uttered" from 01b288a46c3b4ee7a5a2f79ce4b46e4e [/]
+message handler error
+Traceback (most recent call last):
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/engineio/server.py", line 423, in _trigger_event
+    return self.handlers[event](*args)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/socketio/server.py", line 522, in _handle_eio_message
+    self._handle_event(sid, pkt.namespace, pkt.id, pkt.data)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/socketio/server.py", line 458, in _handle_event
+    self._handle_event_internal(self, sid, data, namespace, id)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/socketio/server.py", line 461, in _handle_event_internal
+    r = server._trigger_event(data[0], namespace, sid, *data[1:])
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/socketio/server.py", line 490, in _trigger_event
+    return self.handlers[namespace][event](*args)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/channels/socketio.py", line 149, in handle_message
+    on_new_message(message)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/agent.py", line 317, in handle_message
+    return processor.handle_message(message)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/processor.py", line 82, in handle_message
+    tracker = self.log_message(message)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/processor.py", line 129, in log_message
+    self._handle_message_with_tracker(message, tracker)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/processor.py", line 269, in _handle_message_with_tracker
+    parse_data = self._parse_message(message)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/processor.py", line 255, in _parse_message
+    parse_data = self.interpreter.parse(message.text)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_core/interpreter.py", line 293, in parse
+    return self.interpreter.parse(text)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_nlu/model.py", line 357, in parse
+    component.process(message, **self.context)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_nlu/classifiers/sklearn_intent_classifier.py", line 181, in process
+    intents = self.transform_labels_num2str(intent_ids)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/rasa_nlu/classifiers/sklearn_intent_classifier.py", line 115, in transform_labels_num2str
+    return self.le.inverse_transform(y)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/sklearn/preprocessing/label.py", line 273, in inverse_transform
+    y = column_or_1d(y, warn=True)
+  File "/Users/kinnari/Project2/newsChatbot/env/lib/python2.7/site-packages/sklearn/utils/validation.py", line 797, in column_or_1d
+    raise ValueError("bad input shape {0}".format(shape))
+ValueError: bad input shape (1, 6)
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Received packet PING data None
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Sending packet PONG data None
+44cb4afc9e8b4c509261774befd0116d: Received packet PING data None
+44cb4afc9e8b4c509261774befd0116d: Sending packet PONG data None
+c7d4907d8ac1439d9c20f49b69a8055f: Client is gone, closing socket
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Received packet PING data None
+01b288a46c3b4ee7a5a2f79ce4b46e4e: Sending packet PONG data None
+44cb4afc9e8b4c509261774befd0116d: Received packet PING data None
+44cb4afc9e8b4c509261774befd0116d: Sending packet PONG data None
